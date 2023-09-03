@@ -5,7 +5,7 @@ import { members } from '$lib/global-var';
 
 let standings: MemberStanding[] = [];
 
-const url = 'https://www.cbssports.com/college-football/standings/';
+const url = 'https://www.cbssports.com/nfl/standings/';
 // export const load = (async ({ fetch, params }) => {
 // 	return { members: standings };
 // }) satisfies Standings;
@@ -33,8 +33,9 @@ export const load = async () => {
 		listItems.each((index, element) => {
 			const team = $(element).find('td').eq(0).text();
 			if (team) {
-				const wins = $(element).find('td').eq(5).text().trim();
-				const losses = $(element).find('td').eq(6).text().trim();
+				const wins = $(element).find('td').eq(1).text().trim();
+				const losses = $(element).find('td').eq(2).text().trim();
+				const ties = $(element).find('td').eq(3).text().trim();
 				const member = members.find((member) => member.teams.includes(team));
 				const teamImg = $(element).find('td').eq(0).find('img').attr('data-lazy') || '';
 				if (member) {
@@ -42,10 +43,12 @@ export const load = async () => {
 					if (memberStanding) {
 						memberStanding.wins += parseInt(wins);
 						memberStanding.losses += parseInt(losses);
+						memberStanding.ties += parseInt(ties);
 						memberStanding.teams.push({
 							name: team,
 							wins: parseInt(wins),
 							losses: parseInt(losses),
+							ties: parseInt(ties),
 							img: teamImg
 						});
 					}

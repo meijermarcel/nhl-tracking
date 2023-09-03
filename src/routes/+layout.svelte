@@ -75,7 +75,7 @@
 </style>
 
 <nav>
-    <div class="title">CFB 2023</div>
+    <div class="title">NFL 2023</div>
 </nav>
 
 <div class="container">
@@ -90,5 +90,5 @@
 
 
 <footer>
-    <p>twelveminusfive</p>
+    <p>twelve <span>&#183;</span> minus <span>&#183;</span> five</p>
 </footer>

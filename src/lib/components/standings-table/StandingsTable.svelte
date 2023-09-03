@@ -55,12 +55,12 @@
                             <div>{ team.name }</div>
                         </div>
                     </td>
-                    <td>{ team.wins } - { team.losses }</td>
+                    <td>{ team.wins } - { team.losses } - { team.ties }</td>
                 </tr>
             {/each}
             <tr class="totals">
                 <td class="text-left">{ member.wins + member.losses } GP</td>
-                <td>{ member.wins } - { member.losses }</td>
+                <td>{ member.wins } - { member.losses } - { member.ties }</td>
             </tr>
         </tbody>
     </table>

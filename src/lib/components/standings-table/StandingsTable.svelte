@@ -44,6 +44,7 @@
             <tr>
                 <td></td>
                 <td></td>
+                <td></td>
             </tr>
         </thead>
         <tbody>
@@ -55,12 +56,13 @@
                             <div>{ team.name }</div>
                         </div>
                     </td>
-                    <td>{ team.wins } - { team.losses } - { team.ties }</td>
+                    <td>{ team.wins } - { team.losses } - { team.overtimeLosses }</td>
+                    <td>{ team.points } pts</td>
                 </tr>
             {/each}
             <tr class="totals">
-                <td class="text-left">{ member.wins + member.losses } GP</td>
-                <td>{ member.wins } - { member.losses } - { member.ties }</td>
+                <td class="text-left">{ member.wins + member.losses + member.overtimeLosses } GP</td>
+                <td>{ member.wins } - { member.losses } - { member.overtimeLosses }</td>
             </tr>
         </tbody>
     </table>

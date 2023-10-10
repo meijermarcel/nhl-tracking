@@ -6,7 +6,8 @@ export class MemberStanding {
 	name = '';
 	wins = 0;
 	losses = 0;
-	ties = 0;
+	overtimeLosses = 0;
+	points = 0;
 	teams: Team[] = [];
 	gamesBehind = 0;
 	collapsed = true;
@@ -20,7 +21,8 @@ export class Team {
 	name = '';
 	wins = 0;
 	losses = 0;
-	ties = 0;
+	overtimeLosses = 0;
+	points = 0;
 	img = '';
 }
 

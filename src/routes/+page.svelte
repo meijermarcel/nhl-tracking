@@ -94,8 +94,8 @@
                         { member.name }
                     </h3>
                     <div class="record">
-                        <div>{ member.wins }-{ member.losses }-{ member.ties }</div>
-                        <div class="games-behind">{member.gamesBehind } GB</div>
+                        <div>{ member.points } points</div>
+                        <div class="games-behind">{ member.gamesBehind } PB</div>
                     </div>
                 </div>
             </div>

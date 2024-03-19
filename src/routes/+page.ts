@@ -31,7 +31,8 @@ export const load = async () => {
 		const listItems = $('tbody > tr');
 
 		listItems.each((index, element) => {
-			const team = $(element).find('td').eq(0).text();
+			const teamFull = $(element).find('td').eq(0).text();
+			const team = teamFull.split(' - ')[0];
 			if (team) {
 				const wins = $(element).find('td').eq(2).text().trim();
 				const losses = $(element).find('td').eq(3).text().trim();
